@@ -3,7 +3,7 @@ import App from './App.vue';
 import pinia from './store';
 import router from '@/router';
 import ElementPlus from 'element-plus'
-
+import '@/assets/styles/reset.less';
 
 const app = createApp(App); // 创建vue实例
 app.use(router); // 挂载实例
