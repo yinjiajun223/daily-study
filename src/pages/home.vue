@@ -3,7 +3,7 @@
     <header class="header">
       <div>
         <div class="logo">
-          <img src="@/assets/ying.jpg" alt class="logo" />
+          <img src="@/assets/ying.jpg" class="logo" />
         </div>
         <div class="content">
           <div class="inner">
@@ -19,17 +19,19 @@
             <a @click="jump('learn')">学习笔记</a>
           </li>
           <li>
-            <a href>还没想好</a>
+            <a>还没想好</a>
           </li>
           <li>
-            <a href>还没想好</a>
+            <a>还没想好</a>
           </li>
           <li>
-            <a href>还没想好</a>
+            <a>还没想好</a>
           </li>
         </ul>
       </div>
     </header>
+
+    <div class="fs_20"><span>21312</span></div>
 
     <footer class="footer">
       <p class="copyright">© 2021-2022.</p>
@@ -52,6 +54,7 @@ const jump = (index: string) => {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
+  height: 100vh;
 }
 /* my homepage */
 #wrapper {
