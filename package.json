@@ -14,9 +14,11 @@
     "lint:style": "stylelint \"./**/*.{css,less,vue,html}\" --fix"
   },
   "dependencies": {
+    "@types/jquery": "^3.5.16",
     "@vueuse/core": "^9.12.0",
     "axios": "^1.3.2",
     "element-plus": "^2.2.30",
+    "jquery": "^3.6.3",
     "mitt": "^3.0.0",
     "pinia": "^2.0.30",
     "vue": "^3.2.45",
