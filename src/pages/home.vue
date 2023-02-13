@@ -6,10 +6,12 @@
           <img src="@/assets/ying.jpg" class="logo" />
         </div>
         <div class="content">
-          <div class="inner">
-            <h1 class="name">影</h1>
-            <p>杀人须就咽喉上着刀，吾人为学，当从心髓入微处用力，自然笃实光辉。</p>
-            <p>这是我的个人个人主页</p>
+          <div class="inner" style="transition: all 2s ease">
+            <div class="inner-content">
+              <h1 class="name">影</h1>
+              <p>杀人须就咽喉上着刀，吾人为学，当从心髓入微处用力，自然笃实光辉。</p>
+              <p>这是我的个人个人主页</p>
+            </div>
           </div>
         </div>
       </div>
@@ -31,16 +33,27 @@
       </div>
     </header>
 
-    <div class="fs_20"><span>21312</span></div>
-
     <footer class="footer">
-      <p class="copyright">© 2021-2022.</p>
+      <p class="copyright mg-b_16">© 2021-2022.</p>
+      <a href="https://beian.miit.gov.cn/" target="_blank" class="beian">鄂ICP备2023001252号-1</a>
     </footer>
   </div>
 </template>
-
 <script lang="ts" setup>
 import router from '../router';
+import $ from 'jquery';
+
+onMounted(() => {
+  const innerHeight = $('.inner').outerHeight() as number;
+  const contentHeight = $('.content').outerHeight() as number;
+  console.log('contentHeight', contentHeight, 'innerHeight', innerHeight);
+  const needH = innerHeight + (contentHeight - innerHeight) / 2;
+  console.log('needH', needH);
+  $('.inner-content').height(0).hide();
+  $('.inner').height(0).hide();
+  $('.inner').show().height(needH);
+  $('.inner-content').height(0).fadeIn(2500);
+});
 
 const jump = (index: string) => {
   router.push(index);
@@ -112,6 +125,8 @@ const jump = (index: string) => {
     display: flex;
     border: solid 1px #ffffff;
     border-radius: 4px;
+    position: relative;
+    right: 2px;
     // position: relative;
   }
 }
@@ -120,7 +135,7 @@ const jump = (index: string) => {
   display: block;
   position: relative;
   // top: -57px;
-  left: 245px;
+  left: 243px;
   top: -57px;
   // left: 243px;
   width: 1px;
@@ -167,8 +182,14 @@ const jump = (index: string) => {
   .header .others::before {
     left: 161px;
   }
+  .header .others ul {
+    right: 0;
+  }
   .header .others ul a {
     width: 80px;
   }
+}
+.beian {
+  color: #fff;
 }
 </style>
