@@ -3,6 +3,7 @@ import App from './App.vue';
 import pinia from './store';
 import router from '@/router';
 import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
 import '@/assets/styles/reset.less';
 import '../node_modules/@carelj/metacss/dist/index.min.css';
 import jquery from 'jquery';
