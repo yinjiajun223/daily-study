@@ -34,7 +34,7 @@
     </header>
 
     <footer class="footer">
-      <p class="copyright mg-b_16">© 2021-2022.</p>
+      <p class="copyright mg-b_16">© 2021-2023</p>
       <a href="https://beian.miit.gov.cn/" target="_blank" class="beian">鄂ICP备2023001252号-1</a>
     </footer>
   </div>
@@ -162,7 +162,10 @@ const jump = (index: string) => {
 /* footer */
 #wrapper .footer {
   text-align: center;
-  margin-top: 20px;
+  width: 100%;
+  // position: fixed;
+  right: 2px;
+  bottom: 100px;
 }
 
 @media (max-width: 576px) {

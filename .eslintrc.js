@@ -1,4 +1,4 @@
-module.exports = {
+exports = {
     parser: 'vue-eslint-parser',
 
     parserOptions: {

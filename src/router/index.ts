@@ -17,6 +17,26 @@ const routes: Array<RouteRecordRaw> = [
       title: '学习笔记',
     },
     component: () => import('@/pages/learning/learn.vue'),
+    children: [
+      {
+        path: '/htmlStudy',
+        name: 'htmlStudy',
+        meta: {
+          title: 'htmlStudy',
+        },
+        component: () => import('@/pages/learning/html/html.vue'),
+        children: [
+          {
+            path: '/html',
+            name: 'html',
+            meta: {
+              title: 'html',
+            },
+            component: () => import('@/pages/learning/html/html.vue'),
+          },
+        ],
+      },
+    ],
   },
   {
     path: '/login',
